@@ -53,7 +53,7 @@
         android:id="@+id/btnTogglePassword"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/ic_eye_closed"
+        android:src="@drawable/closed-eyes"
         android:contentDescription="Hiện/Ẩn mật khẩu"
         app:layout_constraintEnd_toEndOf="@id/inputPassword"
         app:layout_constraintTop_toTopOf="@id/inputPassword"
