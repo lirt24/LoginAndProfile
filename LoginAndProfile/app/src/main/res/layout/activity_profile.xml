@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:background="@drawable/background_login">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#B9CDDD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Back"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Back"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Tiêu đề custom -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="176dp"
+            tools:layout_editor_absoluteY="18dp" />
+
+        <ImageView
+            android:id="@+id/ivSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:contentDescription="Settings"
+            android:padding="12dp"
+            android:src="@drawable/ic_setting" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="avatar"
+        android:src="@drawable/ic_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Lê Minh Trí"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
+
+    <LinearLayout
+        android:id="@+id/llCounts"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:divider="@drawable/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="36"
+                android:textColor="#0B0B0B"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends"
+                android:textColor="#0B0B0B" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3636"
+                android:textColor="#0B0B0B"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Followers"
+                android:textColor="#0B0B0B" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/background_cardinfo"
+        android:layout_width="0dp"
+        android:layout_height="330dp"
+        android:background="#BACFDF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llCounts"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableLayout
+            android:id="@+id/cardInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:padding="8dp"
+                    android:text="Email:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:padding="8dp"
+                    android:text="minhtri.lmt2402@gmail.com" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+
+            <TableRow>
+
+                <TextView
+                    android:padding="8dp"
+                    android:text="Phone:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:padding="8dp"
+                    android:text="0905678910" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+
+            <TableRow>
+
+                <TextView
+                    android:padding="8dp"
+                    android:text="Skype:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSkype"
+                    android:padding="8dp"
+                    android:text="lirt_24" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000" />
+
+            <TableRow>
+
+                <TextView
+                    android:padding="8dp"
+                    android:text="Web:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvWeb"
+                    android:padding="8dp"
+                    android:text="minhtri.com" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
